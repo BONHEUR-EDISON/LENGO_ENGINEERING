@@ -1,0 +1,44 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.6.0
+2 info using node@v22.14.0
+3 silly config load:file:C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\xampp\htdocs\lengo-website\.npmrc
+5 silly config load:file:C:\Users\Glo'S\.npmrc
+6 silly config load:file:C:\Users\Glo'S\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install react-icons/fa
+8 verbose argv "install" "react-icons/fa"
+9 verbose logfile logs-max:10 dir:C:\xampp\htdocs\lengo-website\npm-cache\_logs\2026-03-06T22_47_42_521Z-
+10 verbose logfile C:\xampp\htdocs\lengo-website\npm-cache\_logs\2026-03-06T22_47_42_521Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from lockfile: node_modules/leaflet
+15 verbose stack Error: An unknown git error occurred
+15 verbose stack     at makeError (C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\git\lib\make-error.js:28:13)
+15 verbose stack     at C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\git\lib\spawn.js:37:26
+15 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+15 verbose stack     at async module.exports (C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\git\lib\revs.js:18:22)
+15 verbose stack     at async C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\pacote\lib\git.js:258:19
+15 verbose stack     at async withTempDir (C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\fs\lib\with-temp-dir.js:21:14)
+15 verbose stack     at async C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:527:22
+15 verbose stack     at async Promise.all (index 0)
+15 verbose stack     at async #add (C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:516:5)
+15 verbose stack     at async #applyUserRequestsToNode (C:\Users\Glo'S\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:485:7)
+16 error code 128
+17 error An unknown git error occurred
+18 error command git --no-replace-objects ls-remote ssh://git@github.com/react-icons/fa.git
+19 error ERROR: Repository not found.
+19 error fatal: Could not read from remote repository.
+19 error
+19 error Please make sure you have the correct access rights
+19 error and the repository exists.
+20 silly unfinished npm timer reify 1772837267451
+21 silly unfinished npm timer reify:loadTrees 1772837267453
+22 silly unfinished npm timer idealTree:userRequests 1772837268115
+23 verbose cwd C:\xampp\htdocs\lengo-website
+24 verbose os Windows_NT 10.0.19042
+25 verbose node v22.14.0
+26 verbose npm  v11.6.0
+27 verbose exit 128
+28 verbose code 128
+29 error A complete log of this run can be found in: C:\xampp\htdocs\lengo-website\npm-cache\_logs\2026-03-06T22_47_42_521Z-debug-0.log
