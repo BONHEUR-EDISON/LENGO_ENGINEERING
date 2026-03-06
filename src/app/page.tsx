@@ -34,7 +34,7 @@ export default function Home() {
         </section>
 
         {/* Features */}
-        <section className="bg-white">
+        <section className="bg-blue-600">
           <Reveal><FeaturesSection /></Reveal>
         </section>
 
