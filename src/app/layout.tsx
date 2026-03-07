@@ -18,7 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 // Metadata SEO + Social
-export const metadata: Metadata = {
+// Ne pas typer explicitement Metadata
+export const metadata = {
   title: "LENGO-ENGINEERING | Solutions d’ingénierie avancées",
   description: "Solutions d’ingénierie premium pour l’industrie et l’énergie",
   keywords: ["ingénierie", "industrie", "énergie", "solutions", "Lengo"],
