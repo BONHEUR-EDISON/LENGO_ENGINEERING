@@ -31,19 +31,19 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-24">
       {services.map((service, index) => (
         <motion.div
           key={service.title}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: index * 0.1, duration: 0.5 }}
-          className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition"
+          transition={{ delay: index * 0.15, duration: 0.5 }}
+          className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300"
         >
-          <div className="text-5xl mb-4">{service.icon}</div>
+          <div className="text-6xl mb-4">{service.icon}</div>
           <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-          <p className="text-gray-600">{service.description}</p>
+          <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
         </motion.div>
       ))}
     </div>

@@ -1,11 +1,21 @@
 'use client'
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import L from "leaflet"
+import "leaflet/dist/leaflet.css"
+
+// Fix Leaflet default icons for Next.js
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: "/leaflet/marker-icon-2x.png",
+  iconUrl: "/leaflet/marker-icon.png",
+  shadowUrl: "/leaflet/marker-shadow.png",
+})
 
 const locations = [
   { lat: -1.676, lng: 29.233, label: "Siège Goma" },
   { lat: -1.944, lng: 30.061, label: "Bureau Kigali" },
-  { lat: -4.321, lng: 15.307, label: "Projet RDC" }
+  { lat: -4.321, lng: 15.307, label: "Projet RDC" },
 ]
 
 export default function MapContent() {

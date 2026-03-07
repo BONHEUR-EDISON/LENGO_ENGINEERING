@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SmoothScroll from "../components/effetApple/SmoothScroll"
+import Header from "../components/Header"
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 
 const geistSans = Geist({
@@ -17,7 +19,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LENGO-ENGINEERING | Solutions d’ingénierie avancées",
   description: "Solutions d’ingénierie premium pour l’industrie et l’énergie",
-  viewport: "width=device-width, initial-scale=1",
+  width: "device-width",
+  initialScale: 1,
   icons: {
     icon: "/favicon.ico",
   },
@@ -36,10 +39,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         {/* Header */}
+              <Header />
         <SmoothScroll />
 
         <main className="relative z-10">
-          {children}
+          
+{children}
+           
+          
         </main>
       </body>
     </html>
