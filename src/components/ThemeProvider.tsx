@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   // Charger thème depuis le localStorage
   useEffect(() => {
     const stored = localStorage.getItem("darkMode");
-    if (stored) setDarkMode(stored === "false");
+    if (stored) setDarkMode(stored === "true");
     else setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
   }, []);
 
