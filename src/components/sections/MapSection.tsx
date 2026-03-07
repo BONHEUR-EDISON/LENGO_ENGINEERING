@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic"
 import "leaflet/dist/leaflet.css"
 
-const MapNoSSR = dynamic(() => import("./MapContent"), { ssr: false })
+const MapNoSSR = dynamic(() => import("../MapContent"), { ssr: false })
 
 export default function MapSection() {
   return (

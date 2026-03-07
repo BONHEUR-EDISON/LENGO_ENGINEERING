@@ -1,40 +1,51 @@
 'use client'
-import { useState, useEffect, createContext, useContext } from "react";
+
+import { createContext, useContext, useEffect, useState } from "react"
 
 interface ThemeContextType {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
+  darkMode: boolean
+  toggleDarkMode: () => void
 }
 
 const ThemeContext = createContext<ThemeContextType>({
   darkMode: false,
-  toggleDarkMode: () => {},
-});
+  toggleDarkMode: () => {}
+})
 
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [darkMode, setDarkMode] = useState(false);
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
-  // Charger thème depuis le localStorage
-  useEffect(() => {
-    const stored = localStorage.getItem("darkMode");
-    if (stored) setDarkMode(stored === "true");
-    else setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  }, []);
+  const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (darkMode) root.classList.add("dark");
-    else root.classList.remove("dark");
-    localStorage.setItem("darkMode", darkMode.toString());
-  }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+    const stored = localStorage.getItem("theme")
+
+    if (stored === "dark") {
+      setDarkMode(true)
+      document.documentElement.classList.add("dark")
+    }
+
+  }, [])
+
+  const toggleDarkMode = () => {
+
+    const newMode = !darkMode
+    setDarkMode(newMode)
+
+    if (newMode) {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    }
+  }
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
       {children}
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => useContext(ThemeContext)

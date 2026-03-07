@@ -2,7 +2,7 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Header from "../components/Header";
+import Header from "../components/sections/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 import { Analytics } from "@vercel/analytics/next";
@@ -75,41 +75,30 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-      suppressHydrationWarning
-    >
-      <body className="antialiased">
+    <html lang="fr" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <body className="antialiased w-full overflow-x-hidden">
 
         <ThemeProvider>
 
           {/* Header */}
           <Header />
 
-          {/* Smooth scroll */}
+          {/* Smooth Scroll */}
           <SmoothScrollWrapper />
 
           {/* Main content */}
-          <main className="relative z-10">
-            {children}
-          </main>
-
+          <main className="relative z-10 w-full">{children}</main>
         </ThemeProvider>
 
-        {/* Analytics Vercel */}
+        {/* Analytics */}
         <Analytics />
 
-        {/* Performance metrics */}
+        {/* SpeedInsights */}
         <SpeedInsights />
 
       </body>
     </html>
-  );
+  )
 }

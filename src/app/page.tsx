@@ -1,83 +1,79 @@
 'use client'
 
-import Header from "../components/Header"
-import Hero from "../components/Hero"
-import ServicesSection from "../components/ServicesSection"
-import FeaturesSection from "../components/FeaturesSection"
-import ProjectsSection from "../components/ProjectsSection"
-import ProjectsTimeline from "../components/ProjectsTimeline"
-import MetalStructure from "../components/MetalStructure"
-import MapSection from "../components/MapSection"
-import StatsSection from "../components/StatsSection"
-import TestimonialsSection from "../components/TestimonialsSection"
-import CTASection from "../components/CTASection"
-import Footer from "../components/Footer"
-import Reveal from "../components/Reveal"
+import Header from "../components/sections/Header"
+import Hero from "../components/sections/Hero"
+import ServicesSection from "../components/sections/ServicesSection"
+import FeaturesSection from "../components/sections/FeaturesSection"
+import ProjectsSection from "../components/sections/ProjectsSection"
+import ProjectsTimeline from "../components/sections/ProjectsTimeline"
+import MetalStructure from "../components/sections/MetalStructure"
+import MapSection from "../components/sections/MapSection"
+import StatsSection from "../components/sections/StatsSection"
+import TestimonialsSection from "../components/sections/TestimonialsSection"
+import CTASection from "../components/sections/CTASection"
+import Footer from "../components/sections/Footer"
+import Reveal from "../components/sections/Reveal"
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
 
-      {/* Header */}
-      <Header />
-
-      <main className="flex-grow pt-24">
+      <main className="flex-grow w-full pt-24">
 
         {/* Hero */}
-        <section className="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white">
+        <section className="w-full bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white">
           <Hero />
         </section>
 
         {/* Services */}
-        <section className="bg-gray-50">
+        <section className="w-full bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><ServicesSection /></Reveal>
         </section>
 
         {/* Features */}
-        <section className="bg-white">
+        <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><FeaturesSection /></Reveal>
         </section>
 
-        {/* Projets */}
-        <section className="bg-gray-50">
+        {/* Projects */}
+        <section className="w-full bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><ProjectsSection /></Reveal>
         </section>
 
         {/* Timeline */}
-        <section className="bg-white">
+        <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><ProjectsTimeline /></Reveal>
         </section>
 
         {/* 3D Structure */}
-        <section className="bg-gray-50">
+        <section className="w-full bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><MetalStructure /></Reveal>
         </section>
 
-        {/* Carte interactive */}
-        <section className="bg-white">
+        {/* Map */}
+        <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><MapSection /></Reveal>
         </section>
 
-        {/* Statistiques */}
-        <section className="bg-gray-50">
+        {/* Stats */}
+        <section className="w-full bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><StatsSection /></Reveal>
         </section>
 
-        {/* Témoignages */}
-        <section className="bg-white">
+        {/* Testimonials */}
+        <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><TestimonialsSection /></Reveal>
         </section>
 
-        {/* Call To Action final */}
-        <section className="bg-blue-700 text-white">
+        {/* Call to Action */}
+        <section className="w-full bg-blue-700 text-white px-4 sm:px-6 md:px-8 lg:px-16 mx-auto">
           <Reveal><CTASection /></Reveal>
         </section>
 
       </main>
 
-      {/* Footer */}
-      <Footer />
-
+      {/* Footer 
+      <Footer />*/}
     </div>
   )
 }
