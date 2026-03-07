@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 interface CTAButtonProps {
   href: string;
   children: React.ReactNode;
+   className?: string;
 }
 
 export default function CTAButton({ href, children }: CTAButtonProps) {
